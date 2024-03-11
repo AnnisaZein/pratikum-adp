@@ -1,0 +1,27 @@
+print()
+nama    = "NABILLA"
+nim     = "2310431014"
+PROGRAM = "<MENGHITUNG LUAS PERMUKAAN BALOK>"
+rumus   = "2 x [(pxl)+(pxt)+(lxt)]"
+print('~~~~~~~~~~~~~~~~~~')
+print("NAMA = " + nama)
+print("NIM  = " + nim)
+print('~~~~~~~~~~~~~~~~~~')
+print()
+print(PROGRAM)
+print()
+print('rumus menghitung luas permukaan balok')
+print(' =============================')
+print("  L = " + rumus)
+print(' =============================')
+print()
+print("example:")
+panjang =float(input("p = "))
+lebar   =float(input("l = "))
+tinggi  =float(input("t = "))
+print()
+print()
+print("L = " + rumus)
+hasil = 2 * ((panjang * lebar) + (panjang * tinggi) + (lebar * tinggi))
+print(f'  =', hasil)
+print()
