@@ -9,7 +9,7 @@ print('~~~~~~~~~~~~~~~~~~')
 print()
 print(PROGRAM)
 print()
-print("JENIS MENU")
+print("JENIS MENU : ")
 print("1. MAKANAN")
 print("2. MINUMAN")
 print("3. MAKANAN DAN MINUMAN")
@@ -39,55 +39,84 @@ if menu == 1 :
     print(m2)
     print(m3)
     print(h4)
+    pesan = "MENU PESANAN"
     print()
-    pesanan = float(input('PESANAN = '))
+    pesanan = float(input('Nomor menu yang dipesan = '))
+    print()
     if pesanan == 1  :
-        jumlah = int(input("JUMLAH      = "))
+        print(pesan)
+        print(m1)
+        jumlah = int(input("| JUMLAH              | = "))
         p1 = 18 * jumlah
+        print()
         print("TOTAL HARGA =", p1, "ribu")
         print()
     elif pesanan == 2 :
-        jumlah = int(input("JUMLAH      = "))
+        print(pesan)
+        print(m2)
+        jumlah = int(input("| JUMLAH              | = "))
         p1 = 18 * jumlah
+        print()
         print("TOTAL HARGA =", p1, "ribu")
         print()
     elif pesanan == 3 :
-        jumlah = int(input("JUMLAH      = "))
+        print(pesan)
+        print(m3)
+        jumlah = int(input("| JUMLAH              | = "))
         p2 = 20 * jumlah
+        print()
         print("TOTAL HARGA =", p2, "ribu")
         print()
     elif pesanan ==  12 :
-        jumlah1 = int(input("JUMLAH 1     = "))
-        jumlah2 = int(input("JUMLAH 2     = "))
+        print(pesan)
+        print(m1)
+        jumlah1 = int(input("| JUMLAH             | = "))
+        print(m2)
+        jumlah2 = int(input("| JUMLAH             | = "))
         p1 = 18 * jumlah1
         p3 = 18 * jumlah2
         total = p1 + p3
+        print()
         print("TOTAL HARGA =", total, "ribu")
         print()
     elif pesanan ==  13 :
-        jumlah1 = int(input("JUMLAH 1     = "))
-        jumlah3 = int(input("JUMLAH 3     = "))
+        print(pesan)
+        print(m1)
+        jumlah1 = int(input("| JUMLAH             | = "))
+        print(m3)
+        jumlah3 = int(input("| JUMLAH             | = "))
         p1 = 18 * jumlah1
         p4 = 20 * jumlah3
         total = p1 + p4
+        print()
         print("TOTAL HARGA =", total, "ribu")
         print()
     elif pesanan ==  23 :
-        jumlah1 = int(input("JUMLAH 2     = "))
-        jumlah3 = int(input("JUMLAH 3     = "))
+        print(pesan)
+        print(m2)
+        jumlah1 = int(input("| JUMLAH             | = "))
+        print(m3)
+        jumlah3 = int(input("| JUMLAH             | = "))
         p1 = 18 * jumlah1
         p4 = 20 * jumlah3
         total = p1 + p4
+        print()
         print("TOTAL HARGA =", total, "ribu")
         print()
     elif pesanan == 123 :
-        jumlah1 = int(input("JUMLAH 1     = "))
-        jumlah2 = int(input("JUMLAH 2     = "))
-        jumlah3 = int(input("JUMLAH 3     = "))
+        print(pesan)
+        print(m1)
+        jumlah1 = int(input("| JUMLAH             | = ")) 
+        print(m2)
+        jumlah2 = int(input("| JUMLAH             | = "))
+        print(m3)
+        jumlah3 = int(input("| JUMLAH             | = "))
         p1 = 18 * jumlah1
         p2 = 18 * jumlah2
         p3 = 20 * jumlah3
         total = p1 + p2 + p3
+        print()
+        print("TOTAL HARGA =",total, "ribu" )
         print()
     else :
         print("Tidak Valid")
@@ -99,55 +128,83 @@ elif menu == 2:
     print(m22)
     print(m33)
     print(h7)
+    pesan = "MENU PESANAN"
     print()
     pesanan = float(input('PESANAN = '))
+    print()
     if pesanan == 1  :
-        jumlah = int(input("JUMLAH      = "))
+        print(pesan)
+        print(m11)
+        jumlah = int(input("| JUMLAH             | = "))
         p1 = 5 * jumlah
+        print()
         print("TOTAL HARGA =", p1, "ribu")
         print()
     elif pesanan == 2 :
-        jumlah = int(input("JUMLAH      = "))
+        print(pesan)
+        print(m22)
+        jumlah = int(input("| JUMLAH             | = "))
         p1 = 6 * jumlah
+        print()
         print("TOTAL HARGA =", p1, "ribu")
         print()
     elif pesanan == 3 :
-        jumlah = int(input("JUMLAH      = "))
+        print(pesan)
+        print(m33)
+        jumlah = int(input("| JUMLAH             | = "))
         p2 = 4 * jumlah
+        print()
         print("TOTAL HARGA =", p2, "ribu")
         print()
     elif pesanan ==  12 :
-        jumlah1 = int(input("JUMLAH 1     = "))
-        jumlah2 = int(input("JUMLAH 2     = "))
+        print(pesan)
+        print(m11)
+        jumlah1 = int(input("| JUMLAH            | = "))
+        print(m22)
+        jumlah2 = int(input("| JUMLAH            | = "))
         p1 = 5 * jumlah1
         p3 = 6 * jumlah2
         total = p1 + p3
+        print()
         print("TOTAL HARGA =", total, "ribu")
         print()
     elif pesanan ==  13 :
-        jumlah1 = int(input("JUMLAH 1     = "))
-        jumlah3 = int(input("JUMLAH 3     = "))
+        print(pesan)
+        print(m11)
+        jumlah1 = int(input("| JUMLAH            | = "))
+        print(m33)
+        jumlah3 = int(input("| JUMLAH            | = "))
         p1 = 5 * jumlah1
         p4 = 4 * jumlah3
         total = p1 + p4
+        print()
         print("TOTAL HARGA =", total, "ribu")
         print()
     elif pesanan ==  23 :
-        jumlah1 = int(input("JUMLAH 2     = "))
-        jumlah4 = int(input("JUMLAH 3     = "))
+        print(pesan)
+        print(m22)
+        jumlah1 = int(input("| JUMLAH            | = "))
+        print(m33)
+        jumlah4 = int(input("| JUMLAH            | = "))
         p5 = 6 * jumlah1
         p6 = 4 * jumlah4
         total = p5 + p6
         print("TOTAL HARGA =", total, "ribu")
         print()
     elif pesanan == 123 :
-        jumlah1 = int(input("JUMLAH 1     = "))
-        jumlah2 = int(input("JUMLAH 2     = "))
-        jumlah3 = int(input("JUMLAH 3     = "))
+        print(pesan)
+        print(m11)
+        jumlah1 = int(input("| JUMLAH            | = "))
+        print(m22)
+        jumlah2 = int(input("| JUMLAH            | = "))
+        print(m33)
+        jumlah3 = int(input("| JUMLAH            | = "))
         p1 = 5 * jumlah1
         p2 = 6 * jumlah2
         p3 = 4 * jumlah3
         total = p1 + p2 + p3
+        print()
+        print("TOTAL HARGA =", total, "ribu")
         print()
     else :
         print("Tidak Valid")
@@ -169,7 +226,7 @@ elif menu == 3:
     print(m33)
     print(h7)
     print()
-    pesanan = float(input('PESANAN MAKANAN = '))
+    pesanan = float(input('MENU MAKANAN = '))
     if pesanan == 1  :
         jumlah = int(input("JUMLAH      = "))
         p1 = 18 * jumlah
@@ -216,7 +273,7 @@ elif menu == 3:
         total1 = p1 + p2 + p3
     else :
         print("Tidak Valid")
-    pesanan = float(input('PESANAN MINUMAN = '))
+    pesanan = float(input('MENU MINUMAN = '))
     if pesanan == 1  :
         jumlah = int(input("JUMLAH      = "))
         p1 = 5 * jumlah
