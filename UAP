@@ -1,0 +1,301 @@
+from termcolor import cprint
+import os
+import time
+def opening1():
+    for i in range(5):
+        cprint(" "*200,'blue','on_light_blue')
+    k =["     ",
+        "           ",
+        "               ",
+        "                 ",
+        "                 ",
+        ]
+    for item in k:
+        cprint(item*2,"magenta","on_light_magenta")
+
+    for i in range(5):
+        cprint(" "*200,'blue','on_light_blue')
+
+    
+
+def opening2():
+    for i in range(5):
+        cprint(" "*200,'blue','on_light_blue')
+    l =["                    ",
+        "                          ",
+        "                              ",
+        "                                ",
+        "                                ",
+        ]
+    for item in l:
+        cprint(item*2,"magenta","on_light_magenta")
+
+    for i in range(5):
+        cprint(" "*200,'blue','on_light_blue')
+
+    
+def opening3():
+    for i in range(5):
+        cprint(" "*200,'blue','on_light_blue')
+    m =["                              ",
+        "                                    ",
+        "                                        ",
+        "                                          ",
+        "                                          ",
+        ]
+    for item in m:
+        cprint(item*2,"magenta","on_light_magenta")
+
+    for i in range(5):
+        cprint(" "*200,'blue','on_light_blue')
+
+def opening4():
+    for i in range(5):
+        cprint(" "*200,'blue','on_light_blue')
+    m =["                                        ",
+        "                                              ",
+        "                                                  ",
+        "                                                    ",
+        "                                                    ", 
+        ]
+    for item in m:
+        cprint(item*2,"magenta","on_light_magenta")
+
+    for i in range(5):
+        cprint(" "*200,'blue','on_light_blue')
+
+def opening5():
+    for i in range(5):
+        cprint(" "*200,'blue','on_light_blue')
+    n =["                                                  ",
+        "                                                        ",
+        "                                                            ",
+        "                                                              ",
+        "                                                              ",
+        ]
+    for item in n:
+        cprint(item*2,"magenta","on_light_magenta")
+
+    for i in range(5):
+        cprint(" "*200,'blue','on_light_blue')
+
+def opening6():
+    for i in range(5):
+        cprint(" "*200,'blue','on_light_blue')
+    o =["                                                            ",
+        "                                                                  ",
+        "                                                                      ",
+        "                                                                        ",
+        "                                                                        ",
+        ] 
+    for item in o:
+        cprint(item*2,"magenta","on_light_magenta")
+
+    for i in range(5):
+        cprint(" "*200,'blue','on_light_blue')
+
+def opening7():
+    for i in range(5):
+        cprint(" "*200,'blue','on_light_blue')
+    p =["                                                                           ",
+        "                                                                                 ",
+        "                                                                                     ",
+        "                                                                                       ",
+        "                                                                                       ",
+        ] 
+    for item in p:
+        cprint(item*2,"magenta","on_light_magenta")
+
+    for i in range(5):
+        cprint(" "*200,'blue','on_light_blue')
+
+def halaman1():
+    h = ["1111111111 111111      111    11 1111   11  1111111111 11  11111 11 111 111111 1111111111", 
+         "    11     11   11    11 11   11 11 11  11      11     11 11     111    11         11    ", 
+         "    11     11  11    1111111  11 11  11 11      11     11 11     11 11  111111     11    ",
+         "    11     11    11 11     11 11 11   1111      11     11  11111 11  11 1111111    11    "]
+    for item in h:
+        cprint(item,"magenta")
+
+pilihan = ([
+            ["111","07.30","08.30"],
+            ["112","09.00","10.00"],
+            ["113","10.30","11.30"],
+            ["114","12.00","13.00"],
+            ["115","13.30","14.30"]
+            ])
+pilihan2 = ([
+            ["121","07.30","09.00"],
+            ["122","09.00","10.30"],
+            ["123","10.30","12.00"],
+            ["124","12.00","13.30"],
+            ["125","13.30","15.00"]
+            ])
+menu =["NO.RUTE","WAKTU KEBERANGKATAN","WAKTU KEDATANGAN"]
+    
+def rute1():
+    rute1 = "PADANG-PARIAMAN"
+    cprint(rute1, "cyan")
+    cprint(f"| {menu[0]} | {menu[1]} | {menu[2]} |", "black", "on_light_blue")
+    for i in pilihan:
+        cprint(("| {:7} | {:19} | {:16} |".format(i[0],i[1],i[2])), "white", "on_magenta")
+
+def rute2():
+    rute2 = "PADANG-PADANG PANJANG"
+    cprint(rute2, "cyan")
+    cprint(f"| {menu[0]} | {menu[1]} | {menu[2]} |", "black", "on_light_blue")
+    for i in pilihan2:
+        cprint(("| {:7} | {:19} | {:16} |".format(i[0],i[1],i[2])), "white", "on_magenta")
+    
+
+def transisi():
+    time.sleep(0.4)
+    os.system('cls')
+
+transisi()
+opening1()
+transisi()
+opening2()
+transisi()
+opening3()
+transisi()
+opening4()
+transisi()
+opening5()
+transisi()
+opening6()
+transisi()
+opening7()
+transisi()
+halaman1()
+cprint("STASIUN A","black","on_red")
+print()
+time.sleep(0.7)
+rute1() 
+print()
+rute2()
+print()
+while True:
+    pesan = input("ingin memesan(Y/T)? ")
+    print()
+
+    if pesan == "Y":
+
+        n = input('NAMA : ')
+        print()
+
+        t = input('TANGGAL DD/MM/YYYY : ')
+        print()
+
+        cprint("RUTE:", "blue")
+        pp = "PADANG-PARIAMAN"
+        ppj = "PADANG-PADANG PANJANG"
+        print("1.",pp)
+        print("2.",ppj)
+        print()
+        r = input('RUTE : ')
+        print()
+
+        cprint("CLASS:","blue")
+        c1 = "ECONOMY CLASS"
+        c2 = "BUSINESS CLASS"
+        c3 = "FIRST CLASS"
+        print("1.",c1)
+        print("2.",c2)
+        print("3.",c3)
+        print()
+
+        def hitung_harga_tiket(r, c):
+            if r == '1':
+                if c == '1':
+                    return 15000
+                elif c == '2':
+                    return 25000
+                elif c == '3':
+                    return 30000
+            elif r == '2':
+                if c == '1':
+                    return 20000
+                elif c == '2':
+                    return 30000
+                elif c == '2':
+                    return 35000
+            return None
+        
+        c = input('CLASS : ')
+        hitung_harga_tiket(r, c)
+        print()
+
+        nr = input('NO. RUTE : ')
+        print()
+
+        seat = ([[" A "," B "],
+                 ["1 2","1 2"],
+                 ["3 4","2 3"],
+                 ["5 6","5 6"],
+                 ["7 8","7 8"],
+                 ["910","910"]])
+        for i in seat:
+            cprint(("| {:3} | {:3} |".format(i[0],i[1])), "white", "on_magenta")
+        print()
+        s = input('SEAT : ')
+        print()
+
+        cprint("TIKET BERHASIL DI SIMPAN","black","on_red")
+
+        transisi()
+        print("TIKET ANDA :")
+
+        for i in range(25):
+            cprint("  ","blue","on_magenta",end="")
+        print()
+
+        cprint((n),"white","on_light_blue")
+
+        cprint((t),"white","on_light_blue")
+
+        if r == "1":
+            cprint(pp,"white","on_light_blue")
+        elif r == "2":
+            cprint(ppj,"white","on_light_blue")
+
+        if c == "1":
+            cprint((c1),"white","on_light_blue")
+        elif c == "2":
+            cprint((c2),"white","on_light_blue")
+        elif c == "3":
+            cprint((c3),"white","on_light_blue")
+
+        if nr == "111":
+            cprint(pilihan[0],"white","on_light_blue")
+        elif nr == "112":
+            cprint(pilihan[1],"white","on_light_blue")
+        elif nr == "113":
+            cprint(pilihan[2],"white","on_light_blue")
+        elif nr == "114":
+            cprint(pilihan[3],"white","on_light_blue")
+        elif nr == "115":
+            cprint(pilihan[4],"white","on_light_blue")
+
+        if nr == "121":
+            cprint(pilihan2[0],"white","on_light_blue")
+        elif nr == "122":
+            cprint(pilihan2[1],"white","on_light_blue")
+        elif nr == "123":
+            cprint(pilihan2[2],"white","on_light_blue")
+        elif nr == "124":
+            cprint(pilihan2[3],"white","on_light_blue")
+        elif nr == "125":
+            cprint(pilihan2[4],"white","on_light_blue")
+
+        cprint(s,"white",'on_light_blue')
+
+        for i in range(25):
+            cprint("  ","blue","on_magenta",end="")
+        print()
+        print()
+
+    elif pesan == "T":  
+        break
+    else:
+        "TIDAK VALID"
