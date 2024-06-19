@@ -1,5 +1,5 @@
 import os
-from termcolor import cprint, colored
+from termcolor import colored, cprint
 import time
 
 os.system('cls')
