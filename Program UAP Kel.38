@@ -1,0 +1,190 @@
+import os
+from termcolor import cprint, colored
+import time
+
+# Bersihkan layar
+def clear_screen():
+    os.system('cls')
+
+# Tampilkan judul aplikasi
+def judul():
+    os.system('cls')
+    judul = [
+        "1111111111 111111      111    11 1111   11  1111111111 11  11111 11 111 111111 1111111111",
+        "    11     11   11    11 11   11 11 11  11      11     11 11     111    11         11    ",
+        "    11     11  11    1111111  11 11  11 11      11     11 11     11 11  111111     11    ",
+        "    11     11    11 11     11 11 11   1111      11     11  11111 11  11 1111111    11    "
+    ]
+    for baris in judul:
+        cprint(baris, "magenta")
+    cprint("STASIUN A", "black", "on_red")
+    time.sleep(1)
+
+# Hitung harga tiket
+def hitung_harga_tiket(r, c):
+    harga_tiket = {
+        '1': {'1': 15000, '2': 25000, '3': 30000},
+        '2': {'1': 20000, '2': 30000, '3': 35000}
+    }
+    if r in harga_tiket and c in harga_tiket[r]:
+        return harga_tiket[r][c]
+    else:
+        return 
+
+# Tampilkan rute
+def tampilkan_rute(rute, pilihan):
+    cprint(rute, "cyan")
+    cprint("| NO.RUTE | WAKTU KEBERANGKATAN | WAKTU KEDATANGAN |", "blue", "on_white")
+    for i in pilihan:
+        cprint("| {:7} | {:19} | {:16} |".format(i[0], i[1], i[2]), "white", "on_magenta")
+
+# Rute 1
+def rute1():
+    pilihan1 = [
+        ["111", "07.30", "08.30"],
+        ["112", "09.00", "10.00"],
+        ["113", "10.30", "11.30"],
+        ["114", "12.00", "13.00"],
+        ["115", "13.30", "14.30"]
+    ]
+    tampilkan_rute("PADANG-PARIAMAN", pilihan1)
+
+# Rute 2
+def rute2():
+    pilihan2 = [
+        ["121", "07.30", "09.00"],
+        ["122", "09.00", "10.30"],
+        ["123", "10.30", "12.00"],
+        ["124", "12.00", "13.30"],
+        ["125", "13.30", "15.00"]
+    ]
+    tampilkan_rute("PADANG-PADANG PANJANG", pilihan2)
+
+# Tampilkan pilihan kursi
+def tampilkan_pilihan_kursi(rute):
+    if rute == '1':
+        seat = [
+            ["  A  ", "  B  "],
+            ["1  2 ", "1  2 "],
+            ["3  4 ", "2  3 "],
+            ["5  6 ", "5  6 "],
+            ["7  8 ", "7  8 "],
+            ["9  10", "9  10"]
+        ]
+    elif rute == '2':
+        seat = [
+            ["  A  ","  B   "],
+            ["1  2 ", "1  2 "],
+            ["3  4 ", "3  4 "],
+            ["5  6 ", "5  6 "],
+            ["7  8 ", "7  8 "],
+            ["9  10", "9  10"]
+        ]
+    else:
+        return 
+
+    for row in seat:
+        cprint("| {:3} | {:3} |".format(row[0], row[1]), "white", "on_magenta")
+    print()
+
+    return seat
+
+# Cetak struk
+def cetak_struk(nama, umur, jenis_kelamin, rute, nr, tanggal, kelas, kursi, harga, total):
+    clear_screen()
+    cprint('               Struk Pemesanan                 ', 'blue', 'on_white')
+    cprint('-----------------------------------------------', 'blue', 'on_white')
+    print(colored(f'Nama                  : {nama}', 'white'))
+    print(colored(f'Umur                  : {umur}', 'white'))
+    print(colored(f'Jenis Kelamin         : {jenis_kelamin}', 'white'))
+    print(colored(f'Rute                  : {rute}', 'white'))
+    print(colored(f'Nomor Rute            : {nr}', 'white'))
+    print(colored(f'Tanggal keberangkatan : {tanggal}', 'white'))
+    print(colored(f'Jenis Kelas           : {kelas}', 'white'))
+    print(colored(f'Nomor Kursi           : {kursi}', 'white'))
+    print(colored(f'Harga Tiket           : {harga:,.2f}', 'white'))
+    print(colored(f'Total Pembayaran      : {total:,.2f}', 'white'))
+    cprint('-----------------------------------------------', 'blue', 'on_white')
+
+# Fungsi utama
+def main():
+    judul()
+    rute1()
+    print()
+    rute2()
+    print()
+
+    while True:
+        pesan = input("Ingin memesan (Y/T)? ").upper()
+        print()
+
+        if pesan == "Y":
+            nama = input('Nama: ')
+            print()
+
+            umur = input('Umur: ')
+            print()
+
+            jenis_kelamin = input('Jenis Kelamin: ')
+            print()
+
+            tanggal = input('Tanggal keberangkatan (DD/MM/YYYY): ')
+            print()
+         
+            # input rute
+            cprint("Rute:", "blue")
+            print("1. PADANG-PARIAMAN")
+            print("2. PADANG-PADANG PANJANG")
+            r = input('Rute: ')
+            print()
+
+            # input kelas
+            cprint("Kelas:", "blue")
+            print("1. Ekonomi")
+            print("2. Bisnis")
+            print("3. Eksekutif")
+            kelas = input('Kelas: ')
+
+            # Menghitung harga tiket
+            harga = hitung_harga_tiket(r, kelas)
+            if harga == 0:
+                print("Rute atau kelas yang Anda pilih tidak valid.")
+                continue
+            print()
+
+            # input nr
+            nr = input('No. Rute: ')
+            print()
+        
+            # input kursi
+            seat = tampilkan_pilihan_kursi(r)
+            if not seat:
+                print("Rute yang Anda pilih tidak valid.")
+                continue
+            kursi = input('Seat: ')
+            print()
+
+            total = harga 
+            print()
+            cprint("Tiket berhasil disimpan", "black", "on_red")
+            cetak_struk(nama, umur, jenis_kelamin, "PADANG-PARIAMAN" if r == '1' else "PADANG-PADANG PANJANG", nr, tanggal, 
+                        "Ekonomi" if kelas == '1' else "Bisnis" if kelas == '2' else "Eksekutif", kursi, harga, total)
+
+            while True:
+                pesan = input("Ingin memesan lagi (Y/T)? ").upper()
+                if pesan == "Y":
+                    break
+                elif pesan == "T":
+                    clear_screen()
+                    return
+                else:
+                    print("Pilihan tidak valid")
+                    print()
+
+        elif pesan == "T":
+            break
+        else:
+            print("Pilihan tidak valid")
+            print()
+
+main()
